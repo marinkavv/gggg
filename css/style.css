@@ -1,0 +1,529 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
+@font-face {
+  font-family: "Source Sans Pro Regular";
+  src: url("/fonts/source-sans-pro.regular.ttf") format("truetype");
+}
+
+/* GENERAL SETTINGS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* MENU */
+header {
+  background-color: #a9bfe4;
+  padding: 8px 64px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+nav li a {
+  text-decoration: none;
+}
+
+.logo img {
+  width: 136px;
+  height: 55px;
+}
+
+.menu-links {
+  display: flex;
+  gap: 48px;
+}
+
+.menu-links li a {
+  font-family: "Lora", serif;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.menu-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.search-icon img {
+  max-height: 20px;
+}
+
+.cart-icon img {
+  max-height: 20px;
+}
+
+/* MAIN CONTENT */
+
+/* SECTION 1 */
+.bouquet-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 1200px;
+}
+
+.content {
+  max-width: 50%;
+  padding-left: 64px;
+}
+
+.bouquet-section h1 {
+  font-size: 24px;
+  font-family: "Lora", serif;
+  margin-bottom: 12px;
+  color: #351f21;
+}
+
+.bouquet-section p {
+  font-size: 14px;
+  font-family: "Source Sans Pro Regular";
+  width: 303px;
+  color: #351f21;
+  margin-bottom: 17px;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 22px;
+}
+
+button {
+  padding: 5px 40px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-family: "Source Sans Pro Regular";
+  cursor: pointer;
+}
+
+.cart-btn {
+  background-color: #ffc2c7;
+  color: white;
+  border: none;
+}
+
+.catalog-btn {
+  background-color: transparent;
+  color: #989ec3;
+  border: 2px solid #ffc2c7;
+}
+
+.flower-image {
+  max-width: 40%;
+  height: auto;
+  margin: 10px 0;
+}
+
+/* SECTION 2 */
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 46px;
+}
+
+.category-item {
+  position: relative;
+  text-align: center;
+}
+
+.category-item img {
+  width: 210px;
+  height: 145px;
+}
+
+.category-title {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #a9bfe4;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-family: "Lora", serif;
+  color: #ffffff;
+}
+
+/* SECTION 3 */
+.section-about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 30px;
+}
+
+.text-block {
+  max-width: 50%; /* Контейнер для тексту */
+  position: relative;
+  margin-left: 28px;
+}
+
+.text-block h2 {
+  font-size: 24px;
+  color: #351f21;
+  margin-bottom: 18px;
+  font-family: "Lora", serif;
+}
+
+.text-block p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+  font-family: "Source Sans Pro Regular", sans-serif;
+  margin-bottom: 20px;
+  padding-left: 25px; /* Відступ для вертикальної лінії */
+  position: relative;
+}
+
+/* Вертикальна лінія поруч з першим абзацом */
+.section-about p:first-of-type::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 56px;
+  width: 1px;
+  height: 20px;
+  background-color: #000; /* Колір вертикальної лінії */
+}
+.abstract-background {
+  position: absolute;
+  right: -10%; /* Виводимо зображення правіше за межі екрану */
+  top: 20%;
+  overflow: hidden;
+  z-index: 1; /* Розміщуємо його позаду інших елементів */
+  max-width: 45%; /* Ширина зображення */
+  opacity: 0.8; /* Невелика прозорість */
+}
+
+/* Зображення дівчат */
+.women {
+  position: absolute;
+  right: 6%;
+  bottom: 0%;
+  z-index: 2;
+  width: 320px;
+  height: 180px;
+}
+
+/* Соціальні іконки */
+.social-icons {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 0;
+  margin-top: 20px;
+  position: relative;
+  z-index: 3;
+  top: 40px;
+}
+
+.social-icons li img {
+  width: 20px;
+  height: 22px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons li img:hover {
+  transform: scale(1.1); /* Невелике збільшення при наведенні */
+}
+
+/*  */
+.section-services-bg {
+  background-color: #a9bfe44d;
+}
+
+.section-services-bg h2 {
+  margin-left: 64px;
+}
+
+.section-services {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+}
+
+.section-services article {
+  text-align: center;
+  width: 22%;
+}
+
+.section-services img {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 20px;
+}
+
+.section-services p {
+  font-size: 1.1em;
+  color: #333;
+  font-family: "Source Sans Pro Regular", sans-serif;
+}
+
+/* SECTION 4 */
+
+.products h2 {
+  margin: 46px 0 28px 64px;
+}
+
+.products {
+  width: 880px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Центруємо картки */
+  gap: 15px; /* Відстань між картками */
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.product-card {
+  width: 200px; /* Зберігаємо ширину картки */
+  height: 331px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(255, 194, 199, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-image {
+  width: 100%; /* Зображення заповнює ширину картки */
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-name {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.product-name span {
+  display: block;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.buy-button {
+  width: 130px;
+  height: 30px;
+  border-radius: 50px;
+  border: 2px solid #ffc2c7;
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.buy-button:hover {
+  background-color: #ffc2c7;
+  color: #fff;
+}
+
+/* SECTION 5 */
+
+/* Styling for the images of the flowers */
+img[src*="flowers 1.png"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+img[src*="flowers 2.png"] {
+  position: absolute;
+  top: 180px; /* Adjust as necessary */
+  left: 0;
+}
+
+/* Reviews section styling */
+.reviews-section {
+  position: relative;
+  padding: 24px 64px;
+  background-color: rgba(169, 191, 228, 0.2);
+}
+
+/* Reviews title */
+.reviews-section h2 {
+  margin-bottom: 24px; /* Space below the title */
+}
+
+/* Review block styling */
+.review {
+  display: flex;
+  margin-bottom: 45px;
+  position: relative;
+}
+
+.review2 {
+  margin-left: 144px;
+}
+
+.flower1 {
+  margin-top: -40px;
+}
+
+.flower2 {
+  margin-top: 50px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.review img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Making the image round */
+  margin-right: 48px; /* Space between image and text */
+}
+
+.review blockquote {
+  width: 356px;
+  margin: 0;
+  padding: 0;
+}
+
+.review footer {
+  margin-top: 8px;
+  font-size: 14px;
+  color: gray;
+}
+
+/* Horizontal line below the text */
+.line {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: #000;
+  margin: 8px 0 4px; /* Margin between the text and line */
+}
+
+/* Add review form */
+.add-review {
+  margin-top: 89px;
+}
+
+.add-review h3 {
+  margin-bottom: 15px; /* Space between title and the input */
+}
+
+.add-review input {
+  display: block;
+  /* margin-bottom: 12px; */
+  width: 631px;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.feedback-user-name {
+  height: 29px;
+}
+
+.feedback {
+  height: 94px;
+  display: block;
+  width: 631px;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.add-review button {
+  background-color: #ffc2c7;
+  color: #ffffff;
+  /* width: 130px; */
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.circles-container {
+  padding: 24px 64px;
+}
+
+.numbers-container {
+  display: flex;
+  flex-wrap: wrap; /* Дозволяє переносити круги на новий рядок */
+  justify-content: space-between; /* Простір між кругами */
+  margin-bottom: 40px; /* Відстань між першим і другим рядом */
+  row-gap: 40px; /* Відстань між рядами */
+  margin-top: 28px;
+}
+
+.circle-item {
+  display: flex;
+  flex-direction: column; /* Вирівнювання кругів і тексту вертикально */
+  align-items: center; /* Центрування кругів і тексту по горизонталі */
+  text-align: center; /* Центрування тексту */
+  width: 200px; /* Ширина текстового блоку */
+  margin-right: 20px; /* Відстань між сусідніми блоками */
+}
+
+.circle-item:last-child {
+  margin-right: 0; /* Забираємо правий відступ у останнього елемента */
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(255, 194, 199, 1); /* Тінь з параметрами */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px; /* Відстань між кругом і текстом */
+}
+
+.text {
+  width: 200px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.flowers-container {
+  position: relative;
+}
+
+.rotated-flowers {
+  position: absolute; /* Робить картинку абсолютно позиціонованою */
+  right: 0; /* Розміщує картинку з правого боку */
+  bottom: 0; /* Розміщує картинку знизу */
+  transform: rotate(
+    -55.59deg
+  ); /* Повертає картинку на 55.59 градусів і дзеркально відображає її */
+  transform-origin: bottom right; /* Центр повороту у нижньому правому кутку */
+  width: 164px; /* Зберігає адаптивність картинки */
+  height: auto;
+}
+
+/* Мені здається що flowers 3 треба розмістити у футері, щоб кінцівки були як треба */
